@@ -63,6 +63,7 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id/delete' do
+    binding.pry
     @tweet = Tweet.find(params[:id])
     if logged_in? && current_user[:id] == @tweet.user_id
       @tweet.delete
