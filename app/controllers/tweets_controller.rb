@@ -63,7 +63,7 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id/delete' do
-    et = Tweet.find(params[:id])
+    get = Tweet.find(params[:id])
     if logged_in? && current_user[:id] == @tweet.user_id
       @tweet.delete
       redirect to '/tweets'
