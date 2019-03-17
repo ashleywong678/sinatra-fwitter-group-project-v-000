@@ -5,6 +5,7 @@ tweeting!
 
 <a href='/tweets/<%=@tweet.id%>/edit'>Edit Tweet</a>
 <br><br>
+
 <form method="post" action="/tweets/<%= @tweet.id %>"> 
   <input id="hidden" type="hidden" name="_method" value="DELETE"> 
   <input id='Delete Tweet' name='Delete Tweet' type="submit" value="Delete Tweet"> 
